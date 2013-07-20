@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>分页demo</title>
+<link href="css/style.css?d=0712" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<p class="list-pager" id="douban_comment_pager">     
+</p>
+
+<p class="list-pager" id="douban_comment_pager1">     
+</p>
+<p class="list-pager" id="douban_comment_pager2">     
+</p>
+<p class="list-pager" id="douban_comment_pager3">     
+</p>
+<p class="list-pager" id="douban_comment_pager4">     
+</p>
+<p class="list-pager" id="douban_comment_pager5">     
+</p>
+<script>
+//评论分页
+//参数: 总页数、当前页、每页显示的记录数
+function Pager(total, curr, perpage, container){
+	this.total =  total || 0;
+	this.curr = curr || 1;
+	this.perpage =  perpage || 10;
+	this.container = (typeof container == "string" ?document.getElementById(container) : container) || null;
+	this.pagecount = Math.ceil(this.total/this.perpage);
+	this.is_show_one = false;
+}
+
+Pager.prototype={
+	init:function(){
+		if(this.pagecount==1 && !this.is_show_one ){
+			this.container && (this.container.style.display = 'none');
+			return ;
+		}
+		this.turnPage(1);
+	},
+	bulitLinks:function(){
+		var total = this.total;
+		var curr = this.curr;
+		var perpage = this.perpage;
+		var str_dom = this.echoPageNav();
+		this.container.innerHTML = str_dom;
+
+	},
+	bindEvent:function(){
+		var _this = this;
+		//回调curr
+		jQuery("a", this.container).click(function(){
+			//var index = parseInt(this.innerHTML,10);
+			var index = parseInt(jQuery(this).attr('index'));
+
+			_this.turnPage(index);
+		});
+
+	},
+	turnPage:function(i){
+		this.curr = i;
+		this.bulitLinks();
+		this.bindEvent();
+
+	},
+	createElem:function(curr, i){
+		var html = [];
+		if(curr == i){
+			html.push('<strong>'+i+'</strong>');
+		} else {
+			html.push('<a href="javascript:void(0)" index="'+i+'"> '+i+'</a>');
+		}
+		return html.join('');
+	},
+	createUrl:function(max, curr){
+		var html = [];
+		for(var i=1; i<=max; i++){
+			html.push(this.createElem(curr, i));
+		}
+		return html.join('');
+	},
+	echoPageNav:function(){
+		var _this = this;
+		var total = this.total;
+		var curr = this.curr;
+		var perpage = this.perpage;
+		var pagecount = this.pagecount;
+		
+		//占位符...
+		var _placeholder = "<span>...</span>";
+
+		var html = [];
+		//上一页
+		if(curr == 1){
+			//html.push('<span class="next_page">上一页</span>')
+		} else {
+			html.push('<a href="javascript:void(0)" class="next_page next_page1" index="'+(this.curr-1)+'">上一页<b class="n_p_l"></b></a>')
+		}
+
+		//小于10项 全部显示 不要切换 不用判断分支了
+		if(pagecount<=10){
+
+			html.push(this.createUrl(pagecount,curr));
+				
+		} else {
+
+
+			for(var i=1; i<=pagecount; i++){
+				
+				//如果当前页大于5同时页码i小于当前页的前面3个同时页码i又不是1，跳过
+				if(curr>5 && i<curr-3 && i!=1){
+					continue;
+				}
+				//打印页码i
+				html.push(this.createElem(curr,i));	
+
+				//打印第1个页码后面的占位符
+				if(i==1 && curr>5){
+					html.push(_placeholder);
+				}
+
+				//最多打印当前页后面的4个
+				if(i >= curr + 4){
+					break;
+				}
+				
+			}
+
+			//打印页尾
+			//如果当前页小于等于末页的前面第5个，需要打印页尾
+			//否则上面break那里打印了
+			if(curr<=pagecount-5){
+				//如果当前页不等于末页的前面第5个，打印占位符
+				if(curr!=pagecount-5){
+					html.push(_placeholder);
+				}
+				
+				//打印末页
+				html.push(this.createElem(curr,pagecount));
+			}
+			
+
+		}
+
+		//下一页
+		if(curr == pagecount){
+			//html.push('<span class="next_page">下一页</span>');
+		} else {
+			html.push('<a href="javascript:void(0)" class="next_page next_page2" index="'+(this.curr+1)+'">下一页<b class="n_p_r"></b></a>');		
+		}
+
+		var str = html.join('');
+		return str;
+
+	}
+
+}
+
+
+
+//(function(){
+				  pager = new Pager(130, 1, 10, 'douban_comment_pager');
+				pager.init();
+			//})();
+pager1 = new Pager(20, 1, 10, 'douban_comment_pager1');
+pager1.init();
+
+pager2 = new Pager(10, 1, 10, 'douban_comment_pager2');
+pager2.init();
+
+pager3 = new Pager(60, 1, 10, 'douban_comment_pager3');
+pager3.init();
+
+pager4 = new Pager(80, 1, 10, 'douban_comment_pager4');
+pager4.init();
+</script>
+</body>
+</html>
