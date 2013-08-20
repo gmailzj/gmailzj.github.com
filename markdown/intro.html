@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>intro</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+ol,ul{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+b{font-weight:normal;}
+button {cursor:pointer;}
+body{font:normal 12px/20px Arial,\5B8B\4F53,\5FAE\8F6F\96C5\9ED1;color:#333;padding:2em;max-width: 1000px;margin:0 auto;}
+input, select, form img, button,label,textarea{font-size:12px;vertical-align:middle;font-family:Tahoma;color:#daac79;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+html,body{min-height:100%;}
+body{background-color:#F4F4F4; background-repeat:no-repeat;background-image:rgba(244,244,244,.1);}
+body:before{
+	content:""; background-color:#2A94C8; display:block; width:100%; height:3px; position:absolute; top:0; left:0;  box-shadow:0 1px 0 rgba(255,255,255,1);
+	background-image:-webkit-linear-gradient(
+		left, 
+		rgba(213,255,43,1) 0%, 
+		rgba(213,255,43,1) 33.3%, 
+		rgba(255,142,56,1) 33.3%, 
+		rgba(255,142,56,1) 66.6%, 
+		rgba(82,189,255,1) 66.6%, 
+		rgba(82,189,255,1) 100%
+	);
+}
+
+h1,h2,h3,h4,h5,h6{ font-family:arial; text-shadow:0 1px 0 rgba(255,255,255,1); text-align:left; }
+h2,h3,h4,h5,h6{margin:1em 0;}
+h1{margin:30px 0;text-align:center;font-size: 36px}
+h2{ color:#454545; font-size:24px; line-height:50px; height:50px; padding-left:10px; border-left:5px solid #98C408; text-shadow:0 1px 0 rgba(255,255,255,1); margin-bottom:20px;text-align:left;}}
+h3{font-size:18px;line-height:24px;}
+h4{font-size:14px;line-height:20px;}
+h5{font-size:14px;line-height:20px;}
+h6{font-size:14px;line-height:20px;}
+
+p{font-size:14px; line-height:100%; font-family:\5FAE\8F6F\96C5\9ED1;line-height:20px;margin:1em 0;}
+strong{font-weight:bolder;color:#204A63}
+hr{border: 0;border-bottom: 1px solid #ffffff;border-top: 1px solid #ddd;margin: 30px 0}
+code{padding:2px 4px;color:#d14;font-size:12px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;white-space:nowrap;background:#f7f7f9;border: 1px solid #e1e1e8;font-family: Menlo, Consolas, "Courier New", monospace;}
+pre{display:block;padding:10px;margin:10px 0;line-height: 20px;word-break: break-all;word-wrap: break-word;white-space: pre;white-space: pre-wrap;background-color: #f5f5f5;border: 1px solid #ccc;border: 1px solid rgba(0, 0, 0, 0.15);-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+pre code{padding:0;border:0 none;white-space: pre;white-space: pre-wrap;}
+blockquote{padding-left:10px;border-left:3px solid #D0E68A;color:#999}
+
+ul{padding: 0;margin: 0 0 10px 10px; font-family:\5FAE\8F6F\96C5\9ED1;}
+ul li{font-size:14px;line-height:20px;background-image: url(data:image/gif;base64,R0lGODlhBgAGAIABAIiIiP///yH5BAEAAAEALAAAAAAGAAYAAAIKjGEJyLvh0JHHFAA7);background-position: 0px 9px;background-repeat: no-repeat;padding: 0px 0px 0px 15px;}
+ol{padding: 0;margin: 0 0 10px 25px; font-family:\5FAE\8F6F\96C5\9ED1;font-size:14px;}
+ol{list-style-type: decimal;}
+
+a{color:#07b;text-decoration: none;}
+a:hover, a:active{color: #FF8E38;}
+
+table{font-family:5B8B4F53;font-size:12px;}
+table td,table th{border:1px solid #98bf21;text-align:center;padding:4px 8px;}
+table tr:nth-child(2n+1) td{background-color:#EAF2D3;}
+
+dl{font-size:14px;}
+dl dt{font-weight:bold;}
+dl dd{text-indent:2em;}
+
+.navigation {width: 223px;float: left;overflow: hidden;margin-left: -253px;position: fixed;top: 0;}
+.navigation dl {margin-top: 14px;border: 1px solid #ECECEC;width: 221px;background: #FDFDFD;text-indent: 32px;overflow: hidden;}
+.navigation dt {height: 48px;font-family: 微软雅黑;font-size: 22px;line-height: 48px;}
+.navigation dd {border-top: 1px solid #ECECEC;width: 221px;overflow: hidden;}
+.navigation dl .on a {font-weight: bold;color: #06A0DC;}
+.navigation dd a {display: block;width: 221px;height: 44px;line-height: 44px;position: relative;}
+.navigation dd b {width: 0;height: 0;line-height: 0;font-size: 0;border: 3px dashed transparent;border-left-color: #959595;border-left-style: solid;position: absolute;left: 17px;top: 20px;}
+.navigation dl .on b, .navigation dd a:hover b {border-top-color: #959595;border-top-style: solid;border-left-color: #FDFDFD;left: 15px;top: 22px;}
+.navigation dl ul {padding: 0 19px;margin:0;height:0;}
+.navigation dl .on ul {padding: 0 19px 0 10px;margin:0;border-top: 1px solid #ECECEC;display: block;height:auto;max-height:400px;background: #FFFFFF;overflow-y:auto;}
+.navigation dl .on ul a {font-weight: normal;color: #4F4F4F;font-size: 12px;width: 184px;margin-top: -1px;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;}
+.navigation dl .on .on a {font-weight: bold;color: #06A0DC;}
+.navigation dl .on ul b, .navigation .on ul a:hover b {width: 0;height: 0;line-height: 0;font-size: 0;border: 1px dashed transparent;border-color: #4F4F4F;border-style: solid;position: absolute;left: 0;top: 20px;}
+.navigation dl ul li{list-style: none;margin:0;padding:0;text-indent: 12px;background: none;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+.pln { color: #000 }  
+@media screen {
+  .str { color:#080 }  
+  .kwd { color:#00008b }  
+  .com { color:#800000 }  
+  .typ { color:#2b91af }  
+  .lit { color:#800000}  
+  .pln{color:#000000;}
+  .pun, .opn, .clo { color:#000000}
+  .tag { color:#800000}  
+  .atn { color:#ff0000}  
+  .atv { color:#0000ff}  
+  .dec, .var { color:#800080}  
+  .fun { color: red }  
+}
+
+@media only screen and (max-width:1920px){
+	body{max-width:1000px;}
+}
+@media only screen and (max-width:1440px){
+	body{max-width:860px;}
+}
+@media only screen and (max-width:1280px){
+	body{max-width:768px;}
+}
+</style>
+<script>
+//获取h2、h3数据
+function createNav() {
+	var h2 = document.getElementsByTagName('h2'),
+		titles = [],
+		subTitles = [];
+	for (var i = 0; i < h2.length; i++) {
+		titles[i] = h2[i].innerText;
+		subTitles[i] = getSubTitle(h2[i])
+		//h2[i].id = 'title_' + i;
+	}
+	//console.log(subTitles);
+	buildUiNav(titles, subTitles);
+}
+//构建列表
+function buildUiNav(data, dataSub) {
+	var div = document.createElement('div');
+	div.className = 'navigation';
+	div.id = 'nav';
+	var dl = '<dl><dt>目录</dt>';
+	for (var i = 0; i < data.length; i++) {
+		dl += '<dd><a href="javascript:" title="'+ data[i] +'"><b></b>'+ data[i] +'</a>';
+		if (dataSub[i].length > 0) {
+			dl += '<ul>';
+			dl += buildUiNavSub(dataSub[i]);
+			dl += '</ul>';
+		}
+		dl += '</dd>';
+	}
+	dl += '</dl>';
+	div.innerHTML = dl;
+	document.body.appendChild(div);
+}
+//构建二级列表
+function buildUiNavSub(data) {
+	var html = '';
+	for (var i = 0; i < data.length; i++) {
+		html += '<li><a href="#sub_title_'+ i +'" title="'+ data[i] +'"><b></b>'+ data[i] +'</a></li>';
+	};
+	return html;
+}
+//获得二级标题
+function getSubTitle(h2) {
+	var subTitles = [];
+	var h3 = getH3(h2, []);
+	console.log(h3);
+	for (var i = 0; i < h3.length; i++) {
+		subTitles[i] = h3[i].innerText;
+		h3[i].id = 'sub_title_' + i;
+	}
+	return subTitles;
+}
+//递归获取h3标签，直到遇到下一个h2
+function getH3(obj, arr) {
+	var nextElement = getNextElement(obj);
+	var h3 = nextElement.tagName == 'H3' ? nextElement : nextElement.getElementsByTagName('H3');
+	arr = arr.concat(h3);
+	if (getNextElement(nextElement)) {
+		if (getNextElement(nextElement).tagName != 'H2' && getNextElement(nextElement).nodeType == 1) {
+			return getH3(nextElement, arr);
+		}
+	}
+	return arrayDownLevel(arr);
+}
+//获取下一个dom节点
+function getNextElement(obj) {
+	var ret = null;
+	if (obj.nextSibling) {
+		ret = obj.nextSibling.nodeType == 1 ? ret = obj.nextSibling : getNextElement(obj.nextSibling);
+	}
+	return ret;
+}
+//数组降维2变1
+function arrayDownLevel(arr) {
+	var ret = [];
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = 0; j < arr[i].length; j++) {
+			ret.push(arr[i][j]);
+		};
+	};
+	return ret;
+}
+//绑定事件
+function addEvent() {
+	var obj = document.getElementById('nav');
+	//console.log(obj);
+	var dd = obj.getElementsByTagName('dd');
+	var li = obj.getElementsByTagName('li');
+	for (var i = 0; i < dd.length; i++) {
+		dd[i].addEventListener('click',function() {
+			clickDd(this);
+		}, false);
+	};
+	for (var i = 0; i < li.length; i++) {
+		li[i].addEventListener('click',function() {
+			clickLi(this);
+		}, false);
+	};
+}
+//点击一级标题
+function clickDd(obj) {
+	var cls = obj.className;
+	resetClass(obj, 'dd');
+	if (cls == 'on') {
+		obj.className = '';
+	}
+	else {
+		obj.className = 'on';
+	}
+}
+//点击二级标题
+function clickLi(obj) {
+	resetClass(obj, 'li');
+	var cls = obj.className;
+	if (cls != 'on') {
+		obj.className = 'on';
+	}
+	event.stopPropagation();
+}
+//重置class
+function resetClass(obj, tag) {
+	for (var i = 0; i < obj.parentNode.getElementsByTagName(tag).length; i++) {
+		obj.parentNode.getElementsByTagName(tag)[i].className = '';
+	};
+}
+window.onload = function() {
+	createNav();
+	addEvent();
+}
+</script>
+</head>
+<body>
+<h1>前言</h1>
+<p>之前有了解过markdown，但一直没实际使用，今天试用了下，感觉很爽，推荐给大家，特别是在编写规范、接口文档等方面非常适合，因为其简单易用也有很多人用来写网络小说。</p>
+<p><strong>本文也是采用markdown语法书写而成的</strong></p>
+<h1>介绍</h1>
+<p>Markdown 的目标是实现<strong>易读易写</strong>，可以直接在问编辑器书写和保存，除本身具有非常好的可读写外，还可以生存格式非常好看的html代码发布在互联网中。</p>
+<p>如链接：<a href="http://www.itcoder.me/">码农</a>，其书写格式为：</p>
+<pre><code>[码农](http://www.itcoder.me/)
+</code></pre>
+
+<blockquote>
+<p>Markdown 不是想要取代 HTML，甚至也没有要和它相近，它的语法种类很少，只对应 HTML 标记的一小部分。Markdown 的构想不是要使得 HTML 文档更容易书写。在我看来， HTML 已经很容易写了。Markdown 的理念是，能让文档更容易读、写和随意改。HTML 是一种发布的格式，Markdown 是一种书写的格式。就这样，Markdown 的格式语法只涵盖纯文本可以涵盖的范围。</p>
+</blockquote>
+<h1>语法介绍</h1>
+<h2>区块元素</h2>
+<ul>
+<li>
+<p>段落和换行</p>
+<p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p>
+<p>「由一个或多个连续的文本行组成」这句话其实暗示了 Markdown 允许段落内的强迫换行（按入两个以上的空格然后回车）</p>
+</li>
+<li>
+<p>标题</p>
+<p>Markdown 支持两种标题的语法，类 Setext 和类 <a href="http://www.aaronsw.com/2002/atx/">atx</a> 形式，我们这里只介绍我建议使用的Atx 形式.
+类 Atx 形式则是在行首插入 1 到 6 个 <code>#</code> ，对应到标题 1 到 6 阶,例如：</p>
+<pre><code># 这是H1
+## 这是 H2
+###### 这是H6
+</code></pre>
+
+</li>
+<li>
+<p>区块引用 Blockquotes</p>
+<p>Markdown 标记区块引用是使用类似 email 中用 <code>&gt;</code> 的引用方式,如：</p>
+<pre><code>&gt;这是一个区块引用  
+&gt;这是一个区块引用
+</code></pre>
+
+<p>展现形式为：</p>
+<blockquote>
+<p>这是一个区块引用<br />
+这是一个区块引用</p>
+</blockquote>
+</li>
+<li>
+<p>列表
+Markdown 支持有序列表和无序列表。</p>
+<p>无序列表使用星号、加号或是减号作为列表标记：如：</p>
+<pre><code>*   Red
+*   Green
+*   Blue
+</code></pre>
+
+<p>有序列表则使用数字接着一个英文句点：</p>
+<pre><code>1.  Bird
+2.  McHale
+3.  Parish
+</code></pre>
+
+</li>
+<li>
+<p>代码区块
+这功能应该是我们程序员最喜欢的功能，在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，有些还支持代码高亮。</p>
+<pre><code>这是一个普通段落
+
+    这是一个代码区块。
+</code></pre>
+
+</li>
+<li>
+<p>分隔线
+你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<pre><code>* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+</code></pre>
+
+</li>
+</ul>
+<hr />
+<h2>区段元素</h2>
+<ul>
+<li>
+<h3>链接</h3>
+<p>Markdown 支持两种形式的链接语法： 行内式和参考式两种形式</p>
+<p>不管是哪一种，链接文字都是用 [方括号] 来标记。</p>
+<p>这里只介绍行内式，参考式可以访问本文后面的参考链接详细了解。</p>
+<p>要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：</p>
+<pre><code>This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+
+[This link](http://example.net/) has no title attribute.
+</code></pre>
+
+</li>
+<li>
+<h3>强调</h3>
+<p>Markdown 使用星号（*）和底线（_）作为标记强调字词的符号，被 * 或 _ 包围的字词会被转成用 <code>&lt;em&gt;</code> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <code>&lt;strong&gt;</code>，例如：</p>
+<pre><code>*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+</code></pre>
+
+</li>
+<li>
+<h3>代码</h3>
+<p>如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：</p>
+<pre><code>则会被转成 `&lt;strong&gt;`
+</code></pre>
+
+</li>
+<li>
+<h3>图片</h3>
+<p>很明显地，要在纯文字应用中设计一个「自然」的语法来插入图片是有一定难度的。
+Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。
+这里也只介绍行内式：</p>
+<pre><code>![Alt text](/path/to/img.jpg)
+
+![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+</code></pre>
+
+<p>详细叙述如下：</p>
+<ul>
+<li>一个惊叹号 !</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>其它</h2>
+<ul>
+<li>
+<h3>自动链接</h3>
+<p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用方括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：</p>
+<pre><code>&lt;http://example.com/&gt;
+&lt;address@example.com&gt;
+</code></pre>
+
+<p>Markdown 会转为：</p>
+<pre><code>&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;
+&lt;a href=&quot;mailto:address@example.com&quot;&gt;address@example.com&lt;/a&gt;
+</code></pre>
+
+</li>
+<li>
+<h3>反斜杠</h3>
+<p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用 <code>&lt;em&gt;</code> 标签），你可以在星号的前面加上反斜杠：
+	*literal asterisks*
+Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<pre><code>\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+</code></pre>
+
+</li>
+</ul>
+<h1>markdown编辑器</h1>
+<p>markdown的编辑器基本都支持实时预览功能，下面介绍几个我在用的。</p>
+<ul>
+<li>我自己在用的woidows markdown编辑器是<a href="http://www.markdownpad.com/">markdownpad 2</a>,觉还不错</li>
+<li>在线编辑器有<a href="http://mahua.jser.me/">mahua</a></li>
+<li>wordpress编辑器：<a href="http://wordpress.org/plugins/wp-markdown/">wp-markdown</a></li>
+</ul>
+<h1>参考链接</h1>
+<p>Markdown 语法说明 (简体中文版):<a href="http://wowubuntu.com/markdown/" title="Markdown 语法说明 (简体中文版)">http://wowubuntu.com/markdown/</a></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
