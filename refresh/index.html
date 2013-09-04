@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>在线刷流量</title>
+<style>
+body{margin:0 auto;}
+body, div{font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#333;}
+ul, form{margin:0;padding:0;}
+ul{list-style:none}
+.clear{clear:both;font-size:1px;width:1px;height:1px;line-height:1px;visibility:hidden;}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+/* Hides from IE-mac \*/
+* html .clearfix {height:1%;}
+/* End hide from IE-mac */ 
+/* ie7 hack*/ 
+*+html .clearfix {min-height:1%;}
+
+h1.top, .logo,.button input{background:url(i.gif) no-repeat 1000px 1000px}
+h1.top{margin:0;padding:0px 60px;height:48px;overflow:hidden;line-height:48px; background-color:#6faf0a;background-position:0 0;background-repeat:repeat-x;border-bottom:1px solid #577c1d}
+.logo{display:block;float:left;width:52px;height:48px; background-position:0 -48px;}
+.logo strong{display:none}
+h1 span{font-size:21px;color:#FFF;margin-left:10px; font-family:"微软雅黑"; font-weight:normal}
+
+.main{margin:30px 60px;width:600px; line-height:150%;}
+
+.input{margin:40px 0 10px;height:35px;}
+.input label{display:block;float:left;margin-right:8px;line-height:32px;font-weight:bold}
+.sinput{float:left;border:1px solid #6fb323;margin-right:8px;}
+.sinput div{border:1px solid #afafaf;border-width:1px 0px 0px 1px;}
+.sinput span{display:block;border:1px solid #e4e4e4;border-width:1px 0px 0px 1px;height:32px; overflow:hidden;}
+.sinput input{border:1px solid #FFF;height:26px;padding:4px 0 0 4px; font-size:16px;color:#666;font-family:Arial, Helvetica, sans-serif; font-weight:bold}
+
+.button{padding:20px 38px;}
+.button input{width:98px;height:34px; border:0px solid #FFF;font-size:14px;font-weight:bold;color:#666;margin-right:6px}
+.button input.b0{background-position:0px -96px;color:#339900}
+.button input.b1{background-position:0px -164px;}
+
+.friendlinks{margin-top:10px}
+
+.bookmarklet{margin-top:10px;padding:20px 0px;border-top:1px dashed #CCC}
+.copyright{margin:30px 60px;font-size:12px;}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+	<form action="refresh.html" target="_blank" method="get">
+		<div class="input">
+		<label >网址</label>
+		<div class="sinput" style="width:402px"><div><span><input name="url" id="url" value="http://" style="width:400px;"></span></div></div>
+		</div>
+		
+		<div class="input">
+		<label for="refresh">间隔</label>
+		<div class="sinput" style="width:32px"><div><span><input name="refresh" id="refresh" value="10" style="width:30px;"></span></div></div>
+		<label>秒</label>
+		</div>
+
+		<div class="input">
+		<label>referrer</label>
+		<div class="sinput" style="width:402px"><div><span><input name="referrer"  style="width:400px;"></span></div>
+		</div>
+		</div>
+		
+		<div class="button">
+		<input type="submit" class="b0" value="开始">
+		<input type="button" class="b1" value="重置">
+		</div>
+	</form>
+</div>
+
+
+</body></html>
